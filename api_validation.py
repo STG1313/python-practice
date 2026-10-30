@@ -1,6 +1,5 @@
 import math
 
-
 def is_valid_product_response(response):
     if not isinstance(response, dict):
         return False
