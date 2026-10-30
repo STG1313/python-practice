@@ -2,38 +2,19 @@
 
 A collection of small Python projects created while learning Python programming and automated testing with pytest.
 
-## Projects
+## 1. Rating validation
 
-### 1. Rating Validation
+Files: `ratings.py`, `test_ratings.py`
 
-**Location:** `ratings/`
+A function that accepts integer ratings from 1 to 5 and rejects values outside that range or values of other types.
 
-A small validation function that accepts integer ratings from 1 to 5 and rejects values outside that range or values of other types.
+## 2. Product API response validation
 
-Run its tests:
+Files: `api_validation.py`, `test_api_validation.py`
 
-```bash
-python -m pytest -v ratings/test_ratings.py
-```
+A validator for a sample product API response. It checks the response type and status code, body structure, positive integer product ID, non-empty product name, and positive finite numeric price. Booleans, NaN, infinity, invalid body types, and float IDs are rejected.
 
-### 2. Product API Response Validation
-
-**Location:** `api-validation/`
-
-A validator for a sample product API response. It checks:
-
-- The response is a dictionary.
-- The HTTP status code is 200.
-- The response body is a dictionary.
-- The product ID is a positive integer (booleans and floats are rejected).
-- The product name is a non-empty string.
-- The price is a positive finite integer or float (booleans, NaN, and infinity are rejected).
-
-Run its tests:
-
-```bash
-python -m pytest -v api-validation/test_api_validation.py
-```
+This is validation of a sample response object, not a live HTTP/API integration.
 
 ## Setup
 
@@ -49,15 +30,12 @@ Run all tests from the repository root:
 python -m pytest -v
 ```
 
-## What this repository demonstrates
+## Skills demonstrated
 
-- Basic Python functions and conditional validation.
-- Type and value checking.
-- Positive and negative test cases.
-- Parameterized tests with pytest.
-- Testing invalid and boundary input values.
-- A basic mutation-testing exercise: deliberately changing validation logic to check whether a test detects the defect.
+- Python functions and conditional validation
+- Type and value checking
+- Positive, negative, and boundary test cases
+- Parameterized tests with pytest
+- Mutation-testing practice: deliberately changing validation logic to check whether a test detects the defect
 
-## Learning status
-
-This is a learning portfolio. The projects demonstrate foundational Python and automated testing practice; they are not production API integrations.
+This is a learning portfolio demonstrating foundational Python and automated testing practice.
