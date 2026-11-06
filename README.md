@@ -36,6 +36,11 @@ File: `test_fixture_practice.py`
 
 Demonstrates how pytest fixtures provide fresh test data for individual tests.
 
+### 7. Product data validation
+Files: `product_validation.py`, `test_product_validation.py`
+
+Validates a product dictionary, checking the product name and price. Tests cover empty and whitespace-only names, booleans used as prices, missing or invalid numeric values, NaN, infinity, and a zero price. The nine cases are implemented with a parameterized pytest test.
+
 ## Setup
 
 Python 3.14 was used during development. Install the test dependency:
@@ -62,4 +67,4 @@ python -m pytest -v
 - Basic service-layer logic
 - Mutation-testing practice
 
-This is a learning portfolio demonstrating foundational Python and automated testing practice.
+The full local test suite currently passes: 53 tests passed. This is a learning portfolio demonstrating foundational Python and automated testing practice.
